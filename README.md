@@ -9,6 +9,19 @@ In this dataset the label is the questionnaire's own scoring rule:
 
 So the "100% accuracy" reported in many papers measures how well a model copies the AQ-10 score. It does **not** show that the model can detect autism.
 
+## Overview of the experiments
+
+| Information available | E1 | E2 | E3 | E4 | E5 |
+| --- | :---: | :---: | :---: | :---: | :---: |
+| All AQ-10 items | Yes | Yes | No | Subset | Yes/No |
+| Total score | Yes | No | No | No | No |
+| Demographics | Yes | Yes | Yes | No | Yes |
+| Repeated cross-validation | Yes | Yes | Yes | No | No |
+| Nested cross-validation | No | No | No | Yes | No |
+| Separate age cohorts | No | No | No | No | Yes |
+
+E1 = naive (leaky) · E2 = realistic · E3 = demographics only · E4 = reduced questionnaire · E5 = cross-cohort (train on one age group, test on the other)
+
 ## Results (5 × 10-fold CV)
 | Setting | Best model | Accuracy |
 | --- | --- | --- |
